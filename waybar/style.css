@@ -1,51 +1,3 @@
-/*Colorschemes, there are Gruvbox, Tokyo Night, and Everforest by default. The way it works is whichever colorscheme section is defined last will be used. Here everforest is last, but put any one you want to use as the last one.*/
-
-
-
-/* Tokyo Night */
-@define-color background #1a1b26;
-@define-color background-light #24283b;
-@define-color foreground #c0caf5;
-@define-color black #15161e;
-@define-color red #f7768e;
-@define-color green #9ece6a;
-@define-color yellow #e0af68;
-@define-color blue #7aa2f7;
-@define-color magenta #bb9af7;
-@define-color cyan #7dcfff;
-@define-color white #a9b1d6;
-@define-color orange #ff9e64;
-
-
-/* Everforest Dark Colors */
-@define-color background #2b3339;
-@define-color background-light #323c41;
-@define-color foreground #d3c6aa;
-@define-color black #3c474d;
-@define-color red #e67e80;
-@define-color green #a7c080;
-@define-color yellow #dbbc7f;
-@define-color blue #7fbbb3;
-@define-color magenta #d699b6;
-@define-color cyan #83c092;
-@define-color white #d3c6aa;
-@define-color orange #e69875;
-
-/* Pastel TTY Colors */
-@define-color background #212121;
-@define-color background-light #3a3a3a;
-@define-color foreground #e0e0e0;
-@define-color black #5a5a5a;
-@define-color red #ff9a9e;
-@define-color green #b5e8a9;
-@define-color yellow #ffe6a7;
-@define-color blue #63a4ff;
-@define-color magenta #dda0dd;
-@define-color cyan #a3e8e8;
-@define-color white #ffffff;
-@define-color orange #ff8952;
-
-
 
 /* Gruvbox Dark Colors */
 @define-color background #01031a;
@@ -102,8 +54,8 @@
     /* Base styling for all modules */
     border: none;
     border-radius: 0;
-    font-family: "Iosevka Nerd Font";
-    font-size: 14px;
+    font-family: "0xProto Nerd Font";
+    font-size: 13px;
     min-height: 0;
 }
 
@@ -114,18 +66,23 @@ window#waybar {
 
 
 
-/* Common module styling with border-bottom */
+/* Common module styling with border-top */
 #mode, #mpd, #custom-weather, #custom-playerctl, #clock, #cpu,
 #memory, #temperature, #battery, #network, #pulseaudio,
 #backlight, #disk, #custom-uptime, #custom-updates, #custom-quote,
-#idle_inhibitor, #tray, #bluetooth {
-    padding: 0 10px;
+#idle_inhibitor, #tray, #bluetooth, #workspaces, #taskbar {
+    padding: 0 8px;
     margin: 0 2px;
     border-top: 2px solid transparent;
     background-color: transparent;
 }
 
 /* Workspaces styling */
+#workspaces {
+    padding: 0 0px;
+    border-top-color: @foreground;
+}
+
 #workspaces button {
     padding: 0 10px;
     background-color: transparent;
@@ -149,6 +106,11 @@ window#waybar {
     color: @workspaces-urgent-fg;
 }
 
+#taskbar {
+    padding: 0 0px;
+    border-top-color: @foreground;
+}
+
 /* Module-specific styling */
 #mode {
     color: @mode-color;
@@ -164,26 +126,6 @@ window#waybar {
 #mpd.stopped {
     color: @foreground;
     border-top-color: transparent;
-}
-
-#custom-weather {
-    color: @weather-color;
-    border-top-color: @weather-color;
-}
-
-#custom-playerctl {
-    color: @playerctl-color;
-    border-top-color: @playerctl-color;
-}
-
-#custom-playerctl.Playing {
-    color: @cyan;
-    border-top-color: @cyan;
-}
-
-#custom-playerctl.Paused {
-    color: @orange;
-    border-top-color: @orange;
 }
 
 #clock {
@@ -279,35 +221,4 @@ window#waybar {
 #custom-updates {
     color: @updates-color;
     border-top-color: @updates-color;
-}
-
-#custom-quote {
-    color: @quote-color;
-    border-top-color: @quote-color;
-}
-
-#idle_inhibitor {
-    color: @idle-inhibitor-color;
-    border-top-color: transparent;
-}
-
-#idle_inhibitor.activated {
-    color: @idle-inhibitor-active-color;
-    border-top-color: @idle-inhibitor-active-color;
-}
-
-#tray {
-    background-color: transparent;
-    padding: 0 10px;
-    margin: 0 2px;
-}
-
-#tray > .passive {
-    -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    color: @red;
-    border-top-color: @red;
 }
