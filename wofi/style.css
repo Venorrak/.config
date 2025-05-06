@@ -1,0 +1,23 @@
+window {
+    font-size: 20px;
+    background-color: #01031a;
+    color: #d8dee9;
+}
+
+#scroll {
+    visibility: none;
+}
+
+#entry:selected {
+    background-color: #3a37ca;
+}
+
+#input {
+    background-color: #01031a;
+    color: #d8dee9;
+    padding: 0.5rem;
+}
+
+#entry {
+    padding: 0.25rem;
+}
