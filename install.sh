@@ -16,7 +16,6 @@ pacman -Sy waybar \
  xdg-desktop-portal-hyprland \
  hyprpolkitagent \
  pavucontrol \
- code \
  flatpak \
  neofetch \
  alacritty \
@@ -37,6 +36,9 @@ cd yay/
 makepkg -si
 yay -Sy brave-bin
 #sync settings and change font
+
+#VSCODE
+yay visual-studio-code-bin
 
 ### ZSH ###
 pacman -Sy zsh
