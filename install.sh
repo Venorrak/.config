@@ -1,9 +1,5 @@
 #!/bin/bash
 
-#configure ssh (github)
-# git config --global user.email "jaudet199@gmail.com"
-# git config --global user.name "Venorrak"
-
 #configure fonts
 # fc-query -f '%{family[0]}\n' /home/venorrak/.local/share/fonts/otf/HurmitNerdFont/HurmitNerdFont-Regular.otf
 # fc-query -f '%{family[0]}\n' /home/venorrak/.local/share/fonts/otf/0xProto/0xProtoNerdFont-Regular.ttf
@@ -35,7 +31,7 @@ pacman -Sy waybar \
  tmux
 
 ### BRAVE ###
-packman -Sy --needed git base-devel
+pacman -Sy --needed git base-devel
 git clone https://aur.archlinux.org/yay.git
 cd yay/
 makepkg -si
