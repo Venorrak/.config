@@ -72,5 +72,5 @@ pacman -Sy nvidia-dkms \
 systemctl start bluetooth.service
 systemctl enable bluetooth.service
 pacman -Sy bluez \
- bluez-utils \
- bluetuith
+ bluez-utils
+yay bluetuith

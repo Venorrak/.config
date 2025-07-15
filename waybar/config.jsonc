@@ -6,7 +6,7 @@
     "margin": 0,
     "modules-left": ["hyprland/workspaces", "wlr/taskbar"],
         "modules-center": [],                                                                           //battery   //disk     // uptime      //updates        // systray
-    "modules-right": ["clock","pulseaudio", "backlight", "bluetooth", "network", "cpu", "memory", "temperature", "battery", "disk", "custom/uptime", "custom/updates"],
+    "modules-right": ["clock","pulseaudio", "backlight", "bluetooth", "network", "cpu", "memory", "battery", "disk", "custom/uptime", "custom/updates"],
 
 
     "hyprland/workspaces": {
@@ -17,11 +17,12 @@
 			"3": "",
 			"4": "",
 			"5": "",
+			"6": "",
 			"active": "",
 			"default": ""
     		},
         "persistent-workspaces": {
-      		"*": [1, 2, 3, 4, 5]
+      		"*": [1, 2, 3, 4, 5, 6]
         }
     },
 
@@ -88,12 +89,6 @@
         "on-click": "alacritty -e htop"
     },
 
-    "temperature": {
-        "critical-threshold": 80,
-        "format": "{icon} {temperatureC}°C",
-        "format-icons": ["󱃃", "󰔏", "󱃂"]
-    },
-
     "battery": {
         "states": {
             "good": 95,
@@ -148,8 +143,8 @@
     "backlight": {
         "format": "{icon} {percent}%",
         "format-icons": ["󰃞", "󰃟", "󰃠"],
-        "on-scroll-up": "brightnessctl set +5%",
-        "on-scroll-down": "brightnessctl set 5%-"
+        "on-scroll-up": "brightnessctl set +1%",
+        "on-scroll-down": "brightnessctl set 1%-"
     },
 
     "disk": {

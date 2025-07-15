@@ -24,14 +24,10 @@
 
 /* Text and border colors for modules */
 @define-color mode-color @orange;
-@define-color mpd-color @magenta;
-@define-color weather-color @magenta;
 @define-color playerctl-color @magenta;
 @define-color clock-color @blue;
 @define-color cpu-color @green;
 @define-color memory-color @magenta;
-@define-color temperature-color @yellow;
-@define-color temperature-critical-color @red;
 @define-color battery-color @cyan;
 @define-color battery-charging-color @green;
 @define-color battery-warning-color @yellow;
@@ -46,9 +42,6 @@
 @define-color disk-color @cyan;
 @define-color uptime-color @green;
 @define-color updates-color @orange;
-@define-color quote-color @green;
-@define-color idle-inhibitor-color @foreground;
-@define-color idle-inhibitor-active-color @red;
 
 * {
     /* Base styling for all modules */
@@ -67,10 +60,10 @@ window#waybar {
 
 
 /* Common module styling with border-top */
-#mode, #mpd, #custom-weather, #custom-playerctl, #clock, #cpu,
-#memory, #temperature, #battery, #network, #pulseaudio,
-#backlight, #disk, #custom-uptime, #custom-updates, #custom-quote,
-#idle_inhibitor, #tray, #bluetooth, #workspaces, #taskbar {
+#mode, #clock, #cpu,
+#memory, #battery, #network, #pulseaudio,
+#backlight, #disk, #custom-uptime, #custom-updates,
+#bluetooth, #workspaces, #taskbar {
     padding: 0 8px;
     margin: 0 2px;
     border-top: 2px solid transparent;
@@ -117,17 +110,6 @@ window#waybar {
     border-top-color: @mode-color;
 }
 
-#mpd {
-    color: @mpd-color;
-    border-top-color: @mpd-color;
-}
-
-#mpd.disconnected,
-#mpd.stopped {
-    color: @foreground;
-    border-top-color: transparent;
-}
-
 #clock {
     color: @clock-color;
     border-top-color: @clock-color;
@@ -141,16 +123,6 @@ window#waybar {
 #memory {
     color: @memory-color;
     border-top-color: @memory-color;
-}
-
-#temperature {
-    color: @temperature-color;
-    border-top-color: @temperature-color;
-}
-
-#temperature.critical {
-    color: @temperature-critical-color;
-    border-top-color: @temperature-critical-color;
 }
 
 #battery {
@@ -216,9 +188,4 @@ window#waybar {
 #custom-uptime {
     color: @uptime-color;
     border-top-color: @uptime-color;
-}
-
-#custom-updates {
-    color: @updates-color;
-    border-top-color: @updates-color;
 }
